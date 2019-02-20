@@ -13,6 +13,7 @@ import { AboutComponent } from './Components/Shared/about/about.component';
 import { HeroesComponent } from './Components/Shared/heroes/heroes.component';
 import { HeroeComponent } from './Components/Shared/heroe/heroe.component';
 import { SearchheroesComponent } from './Components/Shared/searchheroes/searchheroes.component';
+import { HeroeTarjetaComponent } from './Components/Shared/heroe-tarjeta/heroe-tarjeta.component';
 
 
 
@@ -24,7 +25,8 @@ import { SearchheroesComponent } from './Components/Shared/searchheroes/searchhe
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
-    SearchheroesComponent
+    SearchheroesComponent,
+    HeroeTarjetaComponent
   ],
   imports: [
     BrowserModule,

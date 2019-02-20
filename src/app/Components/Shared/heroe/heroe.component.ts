@@ -24,7 +24,7 @@ export class HeroeComponent implements OnInit {
     console.log(this.hero);
   }
   getLogoHome() {
-    return this.hero.casa == 'Marvel' ? this.pathMarvel : this.pathDc;
+    return this.hero.casa === 'Marvel' ? this.pathMarvel : this.pathDc;
   }
 
 }

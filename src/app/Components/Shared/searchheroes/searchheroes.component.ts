@@ -9,19 +9,22 @@ import {Router} from '@angular/router';
 })
 export class SearchheroesComponent implements OnInit {
   heroes: any = [];
+  termino = '';
+  found = 0;
   constructor(private actRoute: ActivatedRoute, private _heroesService: HeroesService, private router: Router) {
     // esto es un evento al cual se debe suscribir para tomar los parametros de la url
     this.actRoute.params.subscribe(parametros => {
       console.log(parametros);
-      this.heroes = this._heroesService.searchHeroes(parametros.value);
+      this.termino = parametros.value;
+      this.heroes = this._heroesService.searchHeroes(this.termino);
+      this.found = this.heroes.length;
     });
   }
 
   ngOnInit() {
   }
-  verHeroe(idHeroe: number) {
+  /*verHeroe(idHeroe: number) {
     console.log('Quieres ver el heroe ' + idHeroe);
     this.router.navigate(['/heroe', idHeroe]);
-  }
-
+  }*/
 }

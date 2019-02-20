@@ -4,17 +4,12 @@
 
 <hr>
 
+<div *ngIf="found == 0" class="alert alert-info" role="alert">
+  No existen resultados con la búsqueda "{{termino}}"
+</div>
+
 <div class="card-columns animated fadeIn">
 
-  <div *ngFor="let heroe of heroes; let i = index" class="card">
-    <img [src]="heroe.img" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{heroe.nombre | uppercase}}</h5>
-      <p class="card-text">{{heroe.bio | slice: 15}}</p>
-      <p class="card-text"><small class="text-muted">Fecha de Aparición: {{heroe.aparicion | date: "MMM - yyyy"}}</small></p>
-      <button (click)="verHeroe(heroe.id - 1)" class="btn btn-success">Detalles</button>
-      <!--<a [routerLink]="['/heroe',i]" class="btn btn-info">Ver mas</a>-->
-    </div>
-  </div>
+  <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.id - 1" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
 
 </div>
