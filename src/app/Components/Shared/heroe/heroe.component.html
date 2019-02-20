@@ -1,0 +1,21 @@
+
+
+<div class="container animated fadeIn">
+  <div class="row">
+      <div class="col">
+        <div class="mt-3 mb-3">
+          <img [src]="hero.img" style="width: 400px;" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <h5 class="mt-3">{{hero.nombre | uppercase}} - <span class="card-text"><small class="text-muted">({{hero.aparicion | date: "MMM. yyyy"}})</small></span></h5>
+          <p class="card-text">{{hero.bio}}</p>
+          <div class="text-center">
+            <img [src]="getLogoHome()" class="card-img mb-3" style="width: 200px;" [alt]="hero.casa">
+          </div>
+          <a [routerLink]="['/heroes']" class="btn btn-danger btn-block">Volver</a>
+        </div>
+      </div>
+  </div>
+</div>
